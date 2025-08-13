@@ -4,13 +4,11 @@ from email.mime.text import MIMEText
 from typing import List
 
 
-def send_email(sender_email: str, sender_password: str, recipient_emails: List[str], category: str):
+def send_email(sender_email: str, sender_password: str, recipient_emails: List[str], wikipedia_endpoint: str):
     
     # Email configuration
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
-    
-    wikipedia_endpoint = f"https://en.wikipedia.org/wiki/Special:RandomInCategory/{category}"
     
     # Generate HTML content
     html_content = f"""
